@@ -93,3 +93,17 @@ For more info on other configuration options, run `train.py` with the `--help` f
 ```bash
 python train.py --help
 ```
+
+## Using a Pretrained Model
+
+### Downloading the Weights File
+
+Weights for this project are hosted at [HuggingFace](https://huggingface.co/brikwerk/image-difference-segmentation) under `weights` directory. Currently, a DiffNet instance trained on text differences is provided. To use this model, download it and move it to the weights directory in your local copy of this repository.
+
+### Using Pretrained Weights
+
+Pretrained weights can be used in the `batch_process.py` file and the `evaluate.py` file. For both files, specify the path to your weights file using the `--weights_path` CLI argument.
+
+## License
+
+MIT
