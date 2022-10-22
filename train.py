@@ -32,7 +32,7 @@ parser.add_argument('--epochs', default=100, type=int,
                     help="""Number of training epochs.""")
 parser.add_argument('--warmup_epochs', default=10, type=int,
                     help="""Number of warmup epochs.""")
-parser.add_argument('--lr', default=4e-3, type=float,
+parser.add_argument('--lr', default=4e-5, type=float,
                     help="""Training learning rate.""")
 parser.add_argument('--device', default="cpu", type=str,
                     help="""The device to use when running the model.""")
@@ -185,8 +185,7 @@ if __name__ == "__main__":
 
         coco_evaluator = evaluate(model, test_loader, DEVICE)
         ap_score = coco_evaluator.coco_eval['segm'].stats[0]  # 0.5 - 0.95 AP
-        writer.add_scalar('test/AP_0.5_0.95',
-                          scheduler.get_last_lr()[0], epoch)
+        writer.add_scalar('test/AP_0.5_0.95', ap_score, epoch)
 
         # Update the learning rate scheduler
         scheduler.step()
