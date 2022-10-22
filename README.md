@@ -5,7 +5,7 @@
 
 <h4 align="center">Automatically generate segmentation masks and train segmentation models from image differences.</h4>
 
-![A diagram of the image difference process](https://raw.githubusercontent.com/Brikwerk/image-difference-segmentation/master/imgs/header.png)
+![A diagram of the image difference process](imgs/header.jpg)
 
 This project enables creation of large binary segmentation datasets through use of image differences. Certain domains, such as comic books or manga, take particularly well to the proposed approach. Creating a dataset and training a segmentation model involves two manual steps (outside of the code in this repository):
 
